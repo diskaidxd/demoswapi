@@ -16,7 +16,7 @@ class ListRenderer extends Component {
       fetch(link)
         .then(resp => {
           if (resp.ok) return resp.json();
-          else throw new Error('Błąd seci!');
+          else throw new Error('error');
         })
         .then(({ results, next, previous }) => {
           this.setState({
